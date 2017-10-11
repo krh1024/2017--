@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>값으로서의 함수2</title>
+</head>
+<body>
+	<script>
+			// 함수는 함수의 리턴값으로도 사용할 수 있ㄷ ㅏ.   별 5개 완전중요. 많이 쓰일듯.
+		/*
+		function cal (mode){
+			var funcs = {
+				'plus' : function (left, right) {return left + right},
+				'minus' : function (left, right) {return left - right}
+			}
+		return funcs [mode];
+		}
+		
+		alert (cal('plus') (2,1));
+		alert (cal('minus') (2,1));
+		*/
+		// 또한 함수는 배열의 값으로도 사용할 수 있다.
+		
+		var process = [
+			function (input) { return input + 10;},         // A = 11
+			function (input) { return input * input;},		// A = 121
+			function (input) { return input / 2;}			// A = 60.5
+		];
+		
+		var input = 1;
+		for (var i = 0; i < process.length; i++) {
+			input = process[i] (input);
+			alert (input);
+		}
+		
+		
+		/*
+		먼저 var process 는 array 이다.
+		0~2번까지 for문을 대입하여 풀어나갈텐데 var input 이 1이므로
+		for문을 해석하면 i 가 0일 때, i가 process 배열갯수보다 적을때까지 i+1을 한다.
+		그 때, input = process[i] (input) 을 해석해보면
+		1 = process[0] (1);
+		이므로, 1이 리턴되는데 이 값을 var process 의 0번째인
+		function (input) { return input + 10;} 이 놈에게 붙인다.
+		그러면, 1+10 이 되므로 25번줄 A 참조.
+		그 후 input은 11이 되었고, 다시 for문으로 돌아가 11을 1번째 배열인 26번줄에 대입하면,
+		11*11 이 되므로, 26번줄 A를 참조.
+		2번째 배열도 똑같이 반복하여 27번줄 A 가 나옴을 확인할 수 있다.
+		
+		이렇게 변수나 매개변수 리턴값 에 적용되는 것을 first-class citizen 또는 first-class object 등으로 불린다.
+		*/
+	</script>
+</body>
+</html>

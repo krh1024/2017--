@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>객체지향프로그래밍</title>
+</head>
+<body>
+    
+    <script>
+        /*
+        var grades = {
+            'list' : {'egoing' : 10, 'k8805' : 8, 'sorialgi' : 80},
+            'show' : function (){
+                alert('hello world');
+            }
+        }
+        alert(grades['show']());
+        */
+        //객체 안에는 함수도 담을 수 있다.
+        var grades = {
+            'list' : {'egoing' : 10, 'k8805' : 8, 'sorialgi' : 80},
+            'show' : function (){
+                for(var name in this.list){
+                    console.log(name, this.list[name]);
+                }
+            }
+        }
+        grades.show();
+        
+        // 연관되어있는 함수나 객체 또는 배열 등을 하나로 
+        // 카테고라이징 하여 묶어서 사용하는 것이 객체지향 프로그래밍!.
+    </script>
+    
+</body>
+</html>

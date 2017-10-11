@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>값으로서의 함수와 콜백</title>
+</head>
+<body>
+	
+	<script>
+	
+		/*
+		자바스크립트에서는 함수도 객체다. 다시 말해 일종의 값이다.
+		거의 모든 언어가 함수를 가지고 있다.
+		자바스크립트가 다른언어의 함수와 다른 점은 
+		"함수가 값이 될 수 있다" 라는 점이다.
+		*/
+		
+		function cal (func,num) {			// alert (cal (increase, 1)); 과 대입해보면
+			return func(num)				// func 는 increase 이고, num 은 1이 된다.
+		}									// 고로 아래의 function increase 를 보면 된다.
+		
+		function increase (num){			// 여기서는 increase 가 함수이름이며 괄호 안에 하나밖에 없다.
+			return num+1					// 고로 num +1 이므로 1+1 이 값이다.
+		}									// 값은 2
+		
+		function decrease (num){			// 위 increase 와 마찬가지로 decrease 가 함수이름이다.
+			return num-1					// 위와 동일하게 num 은 1 이며, 1-1 이 된다.
+		}									// 값은 0
+		
+		alert (cal (increase,1));
+		alert (cal (decrease,1));
+	</script>
+	
+</body>
+</html>

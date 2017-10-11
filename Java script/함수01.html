@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>지역변수와 전역변수</title>
+</head>
+<body>
+	
+	<script>
+		
+		var vscope = "global";           // 전역변수
+		function fscope() {
+			var vscope = 'local';        // 지역변수
+			vscope = 'local'             // 전역변수
+		}
+		alert(vscope);
+		
+		// 이 때, 변수 vscope 을 호출할 시, 지역변수(function fscope(){var vscope})는 가만히 있게 되며,
+		// 전역변수인 var vscope 이 호출되게 된다. var 는 이렇게 함수 내에서 지역변수와 전역변수를
+		// 나누게 되며, 함수 내에서 동일 이름의 변수가 지역변수로 설정될 시,
+		// 함수 내에서 동일 이름의 전역변수를 설정할 수 없다.
+		// 향후, 타 프로그램이나 타인이 만든 로직(함수)을 참조할 때,
+		// 매우 중요한 것으로써 var를 꼭 생각하고 챙겨야 한다.
+	</script>
+	
+</body>
+</html>

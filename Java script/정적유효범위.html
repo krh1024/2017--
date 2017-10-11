@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>정적유효범위</title>
+</head>
+<body>
+	
+	<script>
+	
+		// 과연 함수B의 i는 누구를 호출하는 것인가?
+		
+		var i = 5;
+		
+		function a (){
+			var i = 10;
+			b();
+		}
+		function b () {
+			document.write(i);
+		}
+		
+		a();
+		
+		/*
+		실행결과를 보면 5가 호출되는 것을 알 수 있다.
+		b가 호출하는 것은 var i=5 의 5를 호출하는 것이다.
+		즉, var i=10 은 지역변수이며
+		함수 a가 아닌 함수 b에서 똑같은 i를 부른다고 한다면
+		전역변수가 호출되는 것이다.
+	</script>
+	
+</body>
+</html>

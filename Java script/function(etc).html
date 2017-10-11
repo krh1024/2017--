@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>function(etc)</title>
+</head>
+<body>
+    
+    <script>
+        // 함수를 만드는 여러가지 방법!!
+        
+        
+        numbering = function(){
+            i=0;
+            while(i<10) {
+                document.write (i);
+                i += 1;
+            }
+        }
+        
+        function numbering (){
+            i=0;
+            while(i<10) {
+                document.write (i);
+                i += 1;
+        }
+            numbering();
+            
+        (function(){
+            i=0;
+            while(i<10) {
+                document.write (i);
+                i += 1;
+            }
+        })();      //일회성 방법!
+    
+    
+    </script>
+    
+</body>
+</html>
