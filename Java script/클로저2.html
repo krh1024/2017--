@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>클로저 2</title>
+</head>
+<body>
+	<script>
+		/*
+		function outter() {
+			var title = 'coding everbody';
+			return function (){
+				alert (title);
+			}
+		}
+		var inner = outter();
+		inner();
+		
+		위는 var title 값이 호출된다.
+		*/
+		
+		
+		// private variable (특정함수 전용 변수 or 비공개 변수)
+		function factory_movie(title){
+			return {
+				get_title : function() {
+					return title;
+				},
+				set_title : function (_title){
+					title=_title
+				}
+			}
+		}
+		ghost = factory_movie('ghost in the shell');
+		matrix = factory_movie('matrix');
+		alert(ghost.get_title());
+		alert(matrix.get_title());
+		ghost.set_title('공각기동대')
+		matrix.set_title('매트릭스')
+		alert(ghost.get_title());
+		alert(matrix.get_title());
+		
+		/* 22번 line의 title 은 변수이다.
+		24번의 get_title 과 27번의 set_title 은 내부함수이며,
+		27번의 _title 이 중요한 변수이다.
+		아래 32,33번은 이름을 그냥 바꿔주는 역할이지만,
+		36,37번 set_title 을 통하여 한글로 바꾸니
+		다시 22번 title 변수값이 한글로 변하는 것을 확인할 수 있다.
+		나중에 변수값이 완전 숨어있고, set_title로만 수정가능할 때가 있다.
+		이는, 변수를 안전하게 저장해놓으려는 프로그래머의 심산이나
+		이를 수정해야 할 때, set_title 로써 수정가능하다.
+	</script>
+</body>
+</html>

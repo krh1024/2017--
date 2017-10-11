@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>클로저 (closure)</title>
+</head>
+<body>
+	<script>
+		// 자바스크립트를 이용한 고난이도의 테크닉을 구사하는데 필수적인 개념으로 활용된다.
+		
+		//내부함수
+		function outter() {							// outter = 외부함수
+			function inner (){						// inner = 내부함수
+				var title = 'coding everbody';		
+				alert (title);
+			}
+			inner();
+		}
+		outter();
+		
+		// 함수 안에 함수를 넣을 수 있다. 넣는 이유는 다른 함수에 끼어들지 못하게 함과 동시에
+		// 좀 더 관리하기 편하게 사용하기 위함이다.
+		
+		// 내부함수는 외부함수의 지역변수에 접근할 수 있다.
+		function outter() {
+			var title = 'coding everbody';
+			function inner (){
+				alert (title);
+			}
+			inner();
+		}
+		outter();
+		
+		// var title 은 외부함수에 정의된 지역변수이다.
+		// var title 은 내부함수 inner 에 대하여 접근할 수 있다.
+		// 이러한 것을 클로저( closure ) 라고 한다.
+	</script>
+</body>
+</html>
