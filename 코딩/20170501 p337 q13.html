@@ -1,0 +1,32 @@
+<html>
+<head> <title> P337 Q13을 해결하라. </title>
+<script>
+
+//for(초기값; 조건문; 증감치)
+
+var i;
+var n;
+
+for(var i=1; i<=10; i=i+1)
+{
+	for(var n=1; n<=i; n=n+1)
+	{
+		document.write("*");
+	}
+document.write("<br>");
+}
+
+
+/*
+상위 for 문과 하위 for문을 동등한 것처럼 서로 엮어서
+조건문까지의 무한루프를 생성.
+고로 i가 10이 될 때까지. 그리고 n이 i값과 동일할 때까지 무한루프.
+*/
+
+
+
+</script>
+</head>
+<body>
+</body>
+</html>

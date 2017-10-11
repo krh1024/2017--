@@ -1,0 +1,31 @@
+<html>
+<head>
+<title> 20170329 폼태그 </title>
+</head>
+<body>
+<div align=center>
+<H1> 회원가입 </h1>
+</div>
+<form method=post action="test.php">
+아이디 : <input type=text name="ID"><br>
+비밀번호 : <input type=password name="pw"> <br>
+성별 : 남 : <input type=radio name="sex" value="M">
+&nbsp 여 : <input type=radio name="sex" value="W"> <br>
+취미 : 축구<input type=checkbox name="soccer"> &nbsp
+독서<input type=checkbox name="reading">
+노래<input type=checkbox name="singing" checked> <br>
+전화 :
+<select name="phone1">
+<option value="02">서울(02)</option>
+<option value="032">경기도(032)</option>
+<option value="064">제주도(064)</option>
+</select>
+- <input type=text name="phone2" size="3">
+- <input type=text name="phone3" size="4">
+</br>
+<input type=submit value="가입"> &nbsp
+<input type=reset value="취소">
+
+</form>
+</body>
+</html>

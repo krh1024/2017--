@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>선택자 복습</title>
+    <style>
+    @import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+    body { font-family: 'Nanum Gothic';  }
+
+      #header {width:1000px; margin: 0 auto;}
+      #header li {color:white; }
+      #wrap
+      {
+        width: 1000px; margin: 0 auto;
+        overflow: hidden;
+      }
+      #left
+      {
+        width: 400px; float: left;
+      }
+      #left h1 {color: #ed5485;}
+      #right
+      {
+        width: 600px; float: left;
+      }
+
+
+      ul{overflow:hidden;}
+      li
+      {
+        list-style: none;
+        float:left;padding: 15px;
+      }
+      li:first-child{border-radius: 8px 0 0 8px;}
+      li:last-child{border-radius: 0 8px 8px 0;}
+      li:nth-child(2n){background-color: #57d1c9;}
+      li:nth-child(2n+1){background-color: #ed5485;}
+
+
+    </style>
+
+  </head>
+  <body>
+    <div id="header">
+      <ul>
+        <li> 자기소개 </li>
+        <li> 가족소개 </li>
+        <li> 친구소개 </li>
+        <li> 우리집소개 </li>
+        <li> 학교소개 </li>
+        <li> 제주도소개 </li>
+        <li> 나라소개 </li>
+        <li> 행성소개 </li>
+      </ul>
+    </div>
+
+    <div id="wrap">
+      <div id ="left">
+      <center><h1> 공지사항 </h1>
+        안녕하세요<p>
+        임희준입니다 허허허
+      </center>
+
+      </div>
+
+      <div id="right">
+      <img src="testimg.png" width="300">
+      </div>
+    </div>
+
+  </body>
+</html>

@@ -1,0 +1,31 @@
+<html>
+	<head> <title> 회원가입 </title> </head>
+<body>
+	<div align=center> <font size=7> 회원가입 </font> </div>
+<p>
+<form method=post action=test.php>
+	ID: <input type=text size=10 name:id><p>
+	password: <input type=password size=10 name:pass> <p>
+	이름: <input type=text size=10 name:name> <p>
+	성별: 남 <input type="radio" name="sex" value="M"> &nbsp 
+	여 <input type="radio" name="sex" value="F"> <p>
+	취미: 야구 <input type="checkbox" name="bassball">&nbsp
+	농구 <input type="checkbox" name="bask">&nbsp
+	독서 <input type="checkbox" name="reading"> <p>
+	전화번호:
+<select>
+	<option value="02">서울(02)</option>
+	<option value="032">서울(032)</option>
+	<option value="061">전남(061)</option>
+	<option value="062">광주(062)</option>
+	<option value="064">제주(064)</option>
+</select>&nbsp
+- <input type="text" size="3">&nbsp- <input type="text" size="4"> <p>
+	자기소개: <br>
+<textarea name="intro" cols=70 rows=10>
+</textarea> <p>
+<input type="submit" value="회원가입">&nbsp
+<input type="reset" value="취소">
+</form>
+</body>
+</html>

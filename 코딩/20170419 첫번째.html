@@ -1,0 +1,78 @@
+<html>
+<head>
+<title> 국영수 점수의 합계와 평균을 구하고 학점을 구분. </title>
+<script>
+//선언문
+var kor = prompt("국어점수를 기입하시오.","");
+var eng = prompt("영어점수를 기입하시오.","");
+var math = prompt("수학점수를 기입하시오.","");
+var grade;
+
+//alert(kor+eng+math);
+
+//처리문
+var sum = parseInt(kor) + parseInt(eng) + parseInt(math);
+var avg = sum/3;
+
+/*if(avg>=80)
+	{
+	document.write("<h1>우수</h1>");
+	}
+		else
+		{
+		document.write("<h1>노력</h1>");
+		}
+*/
+
+if(avg>=90)
+	{
+	grade=("A");
+	}
+	else if(avg>=80)
+	{
+	grade=("B");
+	}
+		else if(avg>=70)
+		{
+		grade=("C");
+		}
+			else if(avg>=60)
+			{
+			grade=("D");
+			}
+				else
+				{
+				grade=("F");
+				}
+
+
+
+//alert(sum);
+//alert(avg);
+
+//출력문
+document.write("<table border=1> <div align=center> <font size=6 font color=#0080FF> <h1> <b> <u> 성적표 </u> </b> </h1> </font> </div>");
+document.write("<tr align=center> <td> <font size=5> 국어 </font> </td> <td> <font size=5> 영어 </font> </td> <td> <font size=5> 수학 </font> </td> <td> <font size=5> 합계 </font> </td> </font> </tr>");
+document.write("<tr align=center> <td> <font size=5>" + kor + "</font> </td>" + "<td> <font size=5>" + eng + " </font> </td>" + "<td> <font size=5>" + math + "</font> </td>" + "<td> <font size=5>" + sum + "</font> </td> </tr> </table>"+"<br>");
+document.write("<table border=1> <tr align=center><td> <font size=5> 평균 </font> </td> <td> <font size=5> 학점 </font> </td> </tr>");
+document.write("<tr align=center> <td> <font size=5>" + avg + " </font> </td> <td> <font size=5> <b>" + grade + " </font> </b> </td> </tr> </table>");
+
+/* 학점을 추가하라.
+평균이 80점 이상이면 "우수"를
+나머지는 "노력"을 출력하라.*/
+
+/* 평균이 
+90점 이상이면 상 
+70점 이상이면 중
+나머지는        하
+로 기입하라.
+*/
+
+
+// 따로 90>avg>=80 이라고 하지 않아도 됨.
+
+</script>
+</head>
+<body>
+</body>
+</html>
