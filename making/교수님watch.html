@@ -1,0 +1,33 @@
+<html>
+
+<body>
+	디지털시계. 시간 : 분 : 초 로 이루어짐.<br> 시간=12 or 24까지<br> 분=59까지
+	<br> 초=59까지
+	<br> 현재 시간에 맞추어서 돌아가야되며, 알람 기능 또한 갖추어야 한다.<br>
+
+	<div id="watch">
+		<script>
+			var handle = setInterval(function() {
+				clock();
+			}, 500);
+
+			function clock() {
+				var el = document.getElementById('watch');
+				var d = new Date();
+				var tt = d.getHours();
+				var mm = d.getMinutes();
+				var ss = d.getSeconds();
+				var time = ("현재시간    " + tt + " : " + mm + " : " + ss);
+				el.innerHTML = time;
+			};
+
+
+			function stopInterval() {
+				clearInterval(handle);
+				handle = null;
+			};
+		</script>
+	</div>
+</body>
+
+</html>
