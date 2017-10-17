@@ -1,4 +1,19 @@
-<html>
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<title>JS시계만들기</title>
+	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery-migrate-1.4.1.min.js"></script>
+	<style>
+		#watch {
+			text-align: center;
+		}
+
+	</style>
+
+</head>
 
 <body>
 	디지털시계. 시간 : 분 : 초 로 이루어짐.<br> 시간=12 or 24까지<br> 분=59까지
@@ -7,10 +22,11 @@
 
 	<div id="watch">
 		<script>
-			var handle = setInterval(function() {
+			
+			var handle = setInterval(function(){
 				clock();
-			}, 500);
-
+			},500);
+			
 			function clock() {
 				var el = document.getElementById('watch');
 				var d = new Date();
@@ -19,13 +35,18 @@
 				var ss = d.getSeconds();
 				var time = ("현재시간    " + tt + " : " + mm + " : " + ss);
 				el.innerHTML = time;
+				
+				if(tt == 20 && mm == 27 ) {
+				alert ('알라마ㅏㅏㅏㅏㅏ')
+				};
 			};
-
-
+			
 			function stopInterval() {
 				clearInterval(handle);
 				handle = null;
 			};
+			
+
 		</script>
 	</div>
 </body>
